@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Geometry Dash Launcher</title>
+  </head>
+  <body>
+    <h1>Custom Geometry Dash Launcher</h1>
+    <button onclick="launchGame()">Launch Game</button>
+
+    <script>
+      const { exec } = require('child_process');
+      function launchGame() {
+        exec('C:\Program Files (x86)\1.9 GDPS\GDPS\DontRenameMeThxDash.exe', (err, stdout, stderr) => {
+          if (err) {
+            console.error(`Error: ${err}`);
+            return;
+          }
+          console.log(`Output: ${stdout}`);
+        });
+      }
+    </script>
+  </body>
+</html>
